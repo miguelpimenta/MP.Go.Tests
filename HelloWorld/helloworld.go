@@ -12,6 +12,7 @@ func main() {
 	println("Running http server @ localhost:" + strconv.Itoa(port))
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "Hello World in GO!!!")
+		println("...")
 	})
 	http.HandleFunc("/hello", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "Hello again. You are @ %s\n", r.URL.Path)
